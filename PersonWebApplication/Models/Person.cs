@@ -18,11 +18,14 @@ namespace PersonWebApplication.Models
 
         [Display(Name = "出身地")]
         public int PerfectureId { get; set; }
+        [Display(Name = "出身地")]
+        [Obsolete]
         public Perfecture Perfecture { get; set; }
 
         [Display(Name = "入社日")]
         [DisplayFormat(DataFormatString = "{0:yyyy年MM月dd日}")]
         [DataType(DataType.Date)]
+        [ValidHireate]
         public DateTime? Hireate { get; set; }
 
         [Display(Name ="出社状態")]
@@ -39,5 +42,22 @@ namespace PersonWebApplication.Models
         [RegularExpression("[A-Z]{3}-[0-9]{4}")]
         [Display(Name = "社員番号")]
         public string EmployeeNo { get; set;}
+    }
+    //以下記述
+    //[AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]//サンプルコードにはある
+    public class ValidHireate : ValidationAttribute
+    {
+        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
+        {
+            if(value != null)
+            {
+                DateTime date = Convert.ToDateTime(value);
+                if(date > DateTime.Now)
+                {
+                    return new ValidationResult("入社日は本日以前を指定してください");
+                }
+            }
+            return ValidationResult.Success;
+        }
     }
 }

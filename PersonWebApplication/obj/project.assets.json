@@ -10291,19 +10291,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m5-watanabe\\.nuget\\packages\\": {}
+    "C:\\Users\\mw090\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m5-watanabe\\source\\repos\\PersonWebApplication\\PersonWebApplication\\PersonWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\mw090\\source\\repos\\ASP.NET-MVC-Lesson\\PersonWebApplication\\PersonWebApplication.csproj",
       "projectName": "PersonWebApplication",
-      "projectPath": "C:\\Users\\m5-watanabe\\source\\repos\\PersonWebApplication\\PersonWebApplication\\PersonWebApplication.csproj",
-      "packagesPath": "C:\\Users\\m5-watanabe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m5-watanabe\\source\\repos\\PersonWebApplication\\PersonWebApplication\\obj\\",
+      "projectPath": "C:\\Users\\mw090\\source\\repos\\ASP.NET-MVC-Lesson\\PersonWebApplication\\PersonWebApplication.csproj",
+      "packagesPath": "C:\\Users\\mw090\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mw090\\source\\repos\\ASP.NET-MVC-Lesson\\PersonWebApplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\m5-watanabe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mw090\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10311,6 +10316,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
