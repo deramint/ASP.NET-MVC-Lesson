@@ -19,8 +19,7 @@ namespace PersonWebApplication.Models
         [Display(Name = "出身地")]
         public int PerfectureId { get; set; }
         [Display(Name = "出身地")]
-        [Obsolete]
-        public Perfecture Perfecture { get; set; }
+        public Perfecture? Perfecture { get; set; }
 
         [Display(Name = "入社日")]
         [DisplayFormat(DataFormatString = "{0:yyyy年MM月dd日}")]
@@ -54,7 +53,7 @@ namespace PersonWebApplication.Models
                 DateTime date = Convert.ToDateTime(value);
                 if(date > DateTime.Now)
                 {
-                    return new ValidationResult("入社日は本日以前を指定してください");
+                    return new ValidationResult("入社日は本日以前を指定記述してください");
                 }
             }
             return ValidationResult.Success;
